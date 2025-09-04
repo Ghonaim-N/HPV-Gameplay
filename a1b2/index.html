@@ -69,6 +69,25 @@
       border: none;
     }
 
+    /* Fullscreen button */
+    #fullscreen-btn {
+      display: block;
+      margin: 10px auto;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: #ff9800;
+      color: #000;
+      border: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    #fullscreen-btn:hover {
+      background-color: #e68a00;
+    }
+
     /* Responsive: hide left column on tablets/smaller screens */
     @media (max-width: 900px) {
       #notebook {
@@ -105,13 +124,10 @@
       <p>This work is copyright under ***.</p>
     </div>
 
-    <iframe id="game-frame" src="https://dtnetwork.github.io/HPVGame_PC/"></iframe>
-  </div>
-
-   <!-- Fullscreen button -->
+    <!-- Fullscreen button -->
     <button id="fullscreen-btn">Full Screen</button>
 
-    <iframe id="game-frame" src="https://example.com/pc-game"></iframe>
+    <iframe id="game-frame" src="https://dtnetwork.github.io/HPVGame_PC/"></iframe>
   </div>
 
   <script>
@@ -127,13 +143,11 @@
       }
     };
 
+    // Switch tabs function
     function switchTab(tabName) {
-      // Update iframe src
       document.getElementById("game-frame").src = tabs[tabName].url;
-      // Update instructions text
       document.getElementById("instructions").innerText = tabs[tabName].instructions;
 
-      // Update tab styling
       document.querySelectorAll(".tab").forEach(tab => tab.classList.remove("active"));
       if (tabName === "pc") {
         document.querySelector(".tab:nth-child(1)").classList.add("active");
