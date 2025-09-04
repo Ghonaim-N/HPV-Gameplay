@@ -108,6 +108,12 @@
     <iframe id="game-frame" src="https://dtnetwork.github.io/HPVGame_PC/"></iframe>
   </div>
 
+   <!-- Fullscreen button -->
+    <button id="fullscreen-btn">Full Screen</button>
+
+    <iframe id="game-frame" src="https://example.com/pc-game"></iframe>
+  </div>
+
   <script>
     // Define URLs and instructions for each tab
     const tabs = {
@@ -135,6 +141,20 @@
         document.querySelector(".tab:nth-child(2)").classList.add("active");
       }
     }
+
+    // Fullscreen button functionality
+    const iframe = document.getElementById("game-frame");
+    const btn = document.getElementById("fullscreen-btn");
+
+    btn.addEventListener("click", () => {
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      } else if (iframe.webkitRequestFullscreen) { // Safari
+        iframe.webkitRequestFullscreen();
+      } else if (iframe.msRequestFullscreen) { // IE11
+        iframe.msRequestFullscreen();
+      }
+    });
   </script>
 </body>
 
