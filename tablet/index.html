@@ -10,18 +10,18 @@
       padding: 0;
       width: 100%;
       height: 100%;
-      background-color: #000; /* matches game frame */
+      background-color: #000;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     /* Wrapper preserves 4:3 aspect ratio for tablets */
-    .game-wrapper {
+    .game-wrapper.tablet-game {
       position: relative;
       width: 100%;
-      max-width: 1200px;      /* optional max width */
-      aspect-ratio: 4 / 3;    /* typical tablet */
+      max-width: 1200px;
+      aspect-ratio: 4 / 3;
       background: #000;
       overflow: hidden;
     }
@@ -37,7 +37,7 @@
   </style>
 </head>
 <body>
-  <div class="game-wrapper">
+  <div class="game-wrapper tablet-game">
     <iframe 
       src="https://dtnetwork.github.io/HPVGame_Tablet/" 
       allow="autoplay; fullscreen" 
