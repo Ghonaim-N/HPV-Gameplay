@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HPV Detective Game (Tablet)</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
 
+    /* Wrapper that preserves aspect ratio */
+    .game-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;      /* optional cap for very large screens */
+      aspect-ratio: 4 / 3;    /* tablet-like ratio */
+      background: #000;
+      overflow: hidden;
+    }
+
+    .game-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-wrapper">
+    <iframe 
+      src="https://dtnetwork.github.io/HPVGame_Tablet/" 
+      allow="autoplay; fullscreen" 
+      sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation">
+    </iframe>
+  </div>
+</body>
+</html>
