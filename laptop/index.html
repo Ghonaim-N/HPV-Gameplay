@@ -5,26 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HPV Detective Game (PC)</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
       background-color: #000;
     }
-    .div_embed_video {
+    .iframe-container {
+      position: relative;
       width: 100%;
-      height: 100%;
+      height: 100vh;
+      overflow: hidden;
     }
-    .div_embed_video iframe {
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       border: none;
-      display: block;
     }
   </style>
 </head>
 <body>
-  <div class="div_embed_video">
+  <div class="iframe-container">
     <iframe 
       src="https://dtnetwork.github.io/HPVGame_PC/" 
       allow="autoplay; fullscreen" 
