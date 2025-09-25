@@ -17,11 +17,11 @@
     }
 
     /* Wrapper preserves 16:9 aspect ratio for PC/laptop */
-    .game-wrapper {
+    .game-wrapper.pc-game {
       position: relative;
       width: 100%;
-      max-width: 1600px;      /* optional max width for large screens */
-      aspect-ratio: 16 / 9;   /* PC-friendly widescreen */
+      max-width: 1600px;
+      aspect-ratio: 16 / 9;
       background: #000;
       overflow: hidden;
     }
@@ -37,7 +37,7 @@
   </style>
 </head>
 <body>
-  <div class="game-wrapper">
+  <div class="game-wrapper pc-game">
     <iframe 
       src="https://dtnetwork.github.io/HPVGame_PC/" 
       allow="autoplay; fullscreen" 
