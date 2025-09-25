@@ -16,28 +16,26 @@
       align-items: center;
     }
 
-    /* Wrapper preserves 4:3 aspect ratio for tablets */
-    .game-wrapper.tablet-game {
-      position: relative;
+    /* Wrapper preserves 4:3 aspect ratio and fills container */
+    .game-wrapper {
       width: 100%;
       max-width: 1200px;
-      aspect-ratio: 4 / 3;
-      background: #000;
-      overflow: hidden;
+      aspect-ratio: 4 / 3; /* tablet aspect ratio */
+      background-color: #000;
+      display: flex;
     }
 
+    /* Iframe fills wrapper */
     .game-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       border: none;
+      display: block;
     }
   </style>
 </head>
 <body>
-  <div class="game-wrapper tablet-game">
+  <div class="game-wrapper">
     <iframe 
       src="https://dtnetwork.github.io/HPVGame_Tablet/" 
       allow="autoplay; fullscreen" 
