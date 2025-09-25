@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HPV Detective Game (Tablet)</title>
+  <title>HPV Detective Game (PC)</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      background-color: #f0f0f0;
     }
 
-    /* Wrapper that preserves aspect ratio */
+    /* Wrapper preserves 16:9 aspect ratio for PC/laptop */
     .game-wrapper {
       position: relative;
       width: 100%;
-      max-width: 1200px;      /* optional cap for very large screens */
-      aspect-ratio: 4 / 3;    /* tablet-like ratio */
+      max-width: 1600px;      /* optional max width for large screens */
+      aspect-ratio: 16 / 9;   /* PC-friendly widescreen */
       background: #000;
       overflow: hidden;
     }
@@ -39,7 +41,8 @@
     <iframe 
       src="https://dtnetwork.github.io/HPVGame_PC/" 
       allow="autoplay; fullscreen" 
-      sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation">
+      sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation"
+      title="HPV Detective Game (PC)">
     </iframe>
   </div>
 </body>
